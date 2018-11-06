@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <br>
+      <h2>Hola {{usuario}}</h2>
+     
+    </div>
+
+  </div>
+  <div class="col text-center">
+    <div class="list-group">
+      <a (click)="servir()" class="list-group-item list-group-item-action ">
+        Servir Alimento
+      </a>
+      <a (click)="tomarV()" class="list-group-item list-group-item-action ">Tomar video</a>
+      <a (click)="tomarF()" class="list-group-item list-group-item-action ">Tomar foto</a>
+
+    </div>
+  </div>
+  <br>
+  <div *ngIf="sirve" class="col">
+    <div class="card animated fadeIn slow" style="width: 22rem;">
+      <div class="card-body">
+        <h5 class="card-title">Servir alimento</h5>
+        <p class="card-text">A través de esta función podrás alimentar tu mascota acorde a la cantidad que desees.</p>
+        <p class="card-text"><small class="text-muted">** Selecciona primero la cantidad de alimento que deseas.</small></p>
+        <div class="col-xs-2">
+            <div class="range">
+              <input #rango type="range" name="range" min="1" max="1000" value="200" onchange="range.value=value">
+              <output id="range">200</output>
+            </div>
+            <br>
+        <a (click)="servirAlimento(rango.value)" class="btn btn-success">Servir</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div *ngIf="video" class="col">
+    <div class="card animated fadeIn slow" style="width: 22rem;">
+      <div class="card-body">
+        <h5 class="card-title">Tomar video</h5>
+        <p class="card-text">Podrás tomar un video y ver quien esta cerca del dispensador.</p>
+        <a href="#" class="btn btn-success">Tomar video</a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="foto" class="col">
+    <div class="card animated fadeIn slow" style="width: 22rem;">
+      <div class="card-body">
+        <h5 class="card-title">Tomar foto</h5>
+        <p class="card-text">Toma la cantidad de fotos que desees y compartelas en tus redes sociales favoritas.</p>
+        <a (click)="tomarFoto()" class="btn btn-success">Tomar foto</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="alimentoNoti" class="alert alert-success animated fadeIn fast" role="alert">
+    El alimento ha sido servido satisfactoriamente.
+    Total servido: {{valorServido}} gramos.
+  </div>
+  <div *ngIf="fotoNoti" class="animated fadeIn fast">
+      <div  class="alert alert-success animated fadeIn fast" role="alert">
+          Foto tomada exitosamente.
+        </div>
+        <img src="https://www.recreoviral.com/wp-content/uploads/2015/05/selfies-de-perros-4-730x730.jpg" width="320" height="320" class="rounded mx-auto d-block">
+  </div>
+  
+
+  
+
+
+  <div class="col">
+
+    <footer>
+        <div class="main-container">
+            <a href="#" class="btn btn-primary">Salir</a>
+      
+          </div>
+    </footer>
+    
+  </div>
+
+</div>
