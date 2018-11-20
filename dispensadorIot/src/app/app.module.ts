@@ -6,12 +6,16 @@ import { LoginComponent } from './components/login/login.component';
 import { DispensadorComponent } from './components/dispensador/dispensador.component';
 import { rutas } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
+import { FotosComponent } from './components/fotos/fotos.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DispensadorComponent
+    DispensadorComponent,
+    FotosComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,

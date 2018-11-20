@@ -1,0 +1,15 @@
+
+
+<div class="card" style="width: 24rem;">
+  <div class="card-header">
+    <button (click)="regresar()" type="button" class="btn btn-primary">Regresar</button>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <video *ngFor="let videos of videos" width="320" height="240" controls>
+        <source src="{{url}}/video/{{videos}}" type="video/mp4">
+      </video>
+    </li>
+    
+  </ul>
+</div>
