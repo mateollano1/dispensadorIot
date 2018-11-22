@@ -60,11 +60,13 @@ export class DispensadorComponent implements OnInit {
     this.cargandoVideo = false;
   }
   servirAlimento(valor: string) {
+    this.pet.servirAlimento().subscribe();
     console.log(valor);
     this.valorServido = valor;
     this.sirve = false;
     this.alimentoNoti = true;
     this.cargandoVideo = false;
+    
 
   }
   tomarFoto() {

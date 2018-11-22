@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PetserviceService {
-  public  link = "http://10.1.1.58:3000";
+  public  link = "http://192.168.25.55:3000";
   constructor(private http: HttpClient) { }
   usuario: string ="";
   getimage () {
@@ -29,6 +29,9 @@ export class PetserviceService {
   getVideos() {
     return this.http.get(`${this.link}/video`);
 
+  }
+  servirAlimento() {
+    return this.http.get(`${this.link}/moverservo`);
   }
 
 }
